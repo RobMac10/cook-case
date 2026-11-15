@@ -154,6 +154,14 @@
         if (pic) open(pic.currentSrc || pic.src, pic.alt);
       });
     });
+    Array.prototype.forEach.call(document.querySelectorAll('.artefact-zoom'), function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var src = btn.getAttribute('data-full');
+        var alt = btn.getAttribute('aria-label') || '';
+        if (src) open(src, alt);
+      });
+    });
     if (closeBtn) closeBtn.addEventListener('click', function (e) { e.stopPropagation(); close(); });
     lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
     document.addEventListener('keydown', function (e) {

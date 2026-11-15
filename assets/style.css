@@ -273,3 +273,17 @@ body.lightbox-open{overflow:hidden}
 
 .witness figure img{width:100%;height:auto;max-height:16rem;object-fit:cover;object-position:top center;border-radius:8px}
 .witness figure{max-width:14rem}
+
+/* Reconstructed class-journal post */
+.journal-exhibit{margin:2rem 0 1.2rem}
+.journal-exhibit .lead-ex{font-size:1.02rem;margin:0 0 1em}
+body:not(.book-page) .book-label,body:not(.book-page) .book-kicker{display:none}
+body:not(.book-page) .post{width:100%;max-width:28rem;margin:0 auto}
+body:not(.book-page) .recon-stamp{top:12px;right:10px}
+.artefact-zoom{display:block;width:100%;margin:0;padding:0;border:0;background:none;cursor:zoom-in;text-align:left;color:inherit;font:inherit}
+.artefact-zoom:focus-visible{outline:3px solid #235e69;outline-offset:3px}
+@media (max-width:520px){
+  body:not(.book-page) .post{max-width:100%;border-radius:14px}
+  body:not(.book-page) .copy .body{font-size:14.5px}
+  body:not(.book-page) .notes{font-size:1.05rem}
+}
