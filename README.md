@@ -1,6 +1,6 @@
 # Cook at Kamay, 1770 (draft)
 
-Interactive companion for *Reopen the Record* Case 2, Year 9 (accurate v9 codes; not Year 7–8).
+Interactive companion for *Reopen the Record*, Year 9 (accurate v9 codes; not Year 7–8).
 
 Planned URL (not published): https://robmac10.github.io/cook-case/
 
