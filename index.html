@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/journal-post.css">
 
+  <link rel="stylesheet" href="assets/image-fit.css">
+  <link rel="stylesheet" href="assets/place-time.css">
 <style id="imagined-badge-css">
 .imagined-badge{display:flex;flex-wrap:wrap;align-items:center;gap:.3rem .55rem;box-sizing:border-box;max-width:100%;margin:0 0 1rem;padding:.5rem .8rem;border:1.5px dashed rgba(60,50,40,.55);border-radius:12px;background:rgba(255,252,244,.92);color:#3d342b;font-family:inherit;line-height:1.35}
 .imagined-badge .ib-icon{flex:0 0 auto;width:22px;height:22px}
@@ -140,9 +142,25 @@
     <h3>Ask three witnesses</h3>
     <p>Each card uses recorded words. The third card is about the Gweagal men who opposed the landing. It uses what Cook, Banks and Parkinson wrote, and it says plainly what was not written down. Ask the same three questions of each witness.</p>
 
-    <article class="witness" id="w-cook">
+    
+
+    <section class="place-time" data-place-time="cook" aria-label="Place and time">
+      <h3>Place and time</h3>
+      <p class="pt-lead"></p>
+      <div class="pt-mapcard"></div>
+      <p class="pt-maplbl" aria-live="polite"></p>
+      <div class="pt-ctl">
+        <button type="button" class="pt-play">▶ Play</button>
+        <input type="range" min="0" max="1" value="0">
+      </div>
+      <ol class="pt-tl" aria-label="Timeline of places and dates in this file"></ol>
+    </section>
+
+<article class="witness" id="w-cook">
       <figure>
+        <button type="button" class="portrait-zoom" aria-label="Enlarge. Nathaniel Dance’s portrait of Captain James Cook, about 1775–76.">
         <img src="assets/portraits/cook.jpg" alt="Nathaniel Dance’s portrait of Captain James Cook, about 1775–76.">
+        </button>
         <figcaption>James Cook, painted by Nathaniel Dance, about 1775–76. Public domain (the artist died in 1811). This is not a picture of the landing at Kamay.</figcaption>
       </figure>
       <div>
@@ -164,7 +182,9 @@
 
     <article class="witness" id="w-banks">
       <figure>
+        <button type="button" class="portrait-zoom" aria-label="Enlarge. Joshua Reynolds’s 1773 portrait of Joseph Banks.">
         <img src="assets/portraits/banks.jpg" alt="Joshua Reynolds’s 1773 portrait of Joseph Banks.">
+        </button>
         <figcaption>Joseph Banks, painted by Joshua Reynolds, 1773. Public domain (the artist died in 1792). This is not a picture of the landing at Kamay.</figcaption>
       </figure>
       <div>
@@ -186,7 +206,9 @@
 
     <article class="witness" id="w-gweagal">
       <figure>
+        <button type="button" class="portrait-zoom" aria-label="Enlarge. Two plain standing silhouettes, not likenesses of the Gweagal men at Kamay.">
         <img src="assets/silhouettes/gweagal.jpg" alt="Two plain standing silhouettes, not likenesses of the Gweagal men at Kamay.">
+        </button>
         <figcaption>Silhouettes, not likenesses. The 1770 journals do not name the two men or carry a portrait of them. A later identification of one man as Cooman is recorded, and disputed, in Super Sleuths.</figcaption>
       </figure>
       <div>
@@ -337,6 +359,18 @@
   <p>Reopen the Record: Australian Histories</p>
   <p class="note">This investigation acknowledges the Gweagal and Dharawal communities of Kamay. Real recorded words are used. No likeness of the Gweagal men has been invented. Search engines are asked not to index this app. If something here should be corrected, please tell the teacher who shared this investigation, so the file can be updated.</p>
 </footer>
+
+<div id="portrait-lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="portrait-lightbox-title">
+  <p id="portrait-lightbox-title" class="visually-hidden">Magnified image</p>
+  <button type="button" class="lightbox-close" aria-label="Close the magnified image">&times;</button>
+  <div class="lightbox-stage">
+    <img src="" alt="">
+  </div>
+  <p class="lightbox-hint">Pinch or scroll to zoom. Tap outside, or press Escape, to close.</p>
+</div>
+
 <script src="assets/app.js"></script>
+<script src="assets/place-time.js"></script>
+
 </body>
 </html>
